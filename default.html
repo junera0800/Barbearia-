@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vargas Barber Shop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Vargas Barber Shop</h1>
+        <p>Seu estilo, nossa arte!</p>
+    </header>
+
+    <section id="agendamento">
+        <h2>Agende seu horário</h2>
+        <form id="formAgendamento">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" required>
+
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" required>
+
+            <label for="data">Escolha a data:</label>
+            <input type="date" id="data" required>
+
+            <label for="hora">Escolha a hora:</label>
+            <input type="time" id="hora" required>
+
+            <button type="submit">Agendar</button>
+        </form>
+    </section>
+
+    <section id="whatsapp">
+
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Vargas Barber Shop - Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+<body
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #222;
+    color: white;
+    padding: 20px;
+}
+
+h1 {
+    margin: 0;
+}
+
+section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 400px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, button {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #222;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #444;
+}
+
+.whatsapp-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #25D366;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.whatsapp-btn:hover {
+    background-color: #1EBE57;
+}
+
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    background: #222;
+    color: white;
+}
+</body><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vargas Barber Shop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #222;
+            color: white;
+            padding: 20px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 400px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input, button {
+            margin-top: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #222;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #444;
+        }
+
+        .whatsapp-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #25D366;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #1EBE57;
+        }
+
+        footer {
+            margin-top: 20px;
+            padding: 10px;
+            background: #222;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Vargas Barber Shop</h1>
+        <p>Seu estilo, nossa arte!</p>
+    </header>
+
+    <section id="agendamento">
+        <h2>Agende seu horário</h2>
+        <form id="formAgendamento">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" required>
+
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" required>
+
+            <label for="data">Escolha a data:</label>
+            <input type="date" id="data" required>
+
+            <label for="hora">Escolha a hora:</label>
+            <input type="time" id="hora" required>
+
+            <button type="submit">Agendar</button>
+        </form>
+    </section>
+
+    <section id="whatsapp">
+        <h2>Fale Conosco</h2>
+        <a href="https://wa.me/SEUNUMERO" target="_blank" class="whatsapp-btn">Chamar no WhatsApp</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Vargas Barber Shop - Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        document.getElementById("formAgendamento").addEventListener("submit", function(event) {
+            event.preventDefault(); // Evita o recarregamento da página
+
+            let nome = document.getElementById("nome").value;
+            let telefone = document.getElementById("telefone").value;
+            let data = document.getElementById("data").value;
+            let hora = document.getElementById("hora").value;
+
+            if (!nome || !telefone || !data || !hora) {
+                alert("Por favor, preencha todos os campos.");
+                return;
+            }
+
+            let mensagem = `Olá, gostaria de agendar um horário na Vargas Barber Shop.%0A
+            *Nome:* ${nome}%0A
+            *Telefone:* ${telefone}%0A
+            *Data:* ${data}%0A
+            *Hora:* ${hora}`;
+
+            let numeroWhatsApp = "SEUNUMERO"; // Substitua pelo seu número com DDD
+            let url = `https://wa.me/${numeroWhatsApp}?text=${mensagem}`;
+
+            window.location.href = url; // Redireciona automaticamente para o WhatsApp
+        });
+    </script>
+</body>
+</html>
